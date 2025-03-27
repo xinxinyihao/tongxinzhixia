@@ -7,9 +7,23 @@
 ## 项目截图
 
 - **PC端网页截图**
+<details>
+
+<summary>点击展开查看图片</summary>
+
 ![PC端网页截图](screenshot/pc_screenshot.png)
+
+</details>
+
 - **移动端网页截图**
+<details>
+
+<summary>点击展开查看图片</summary>
+
 ![移动端网页截图](screenshot/phone_screenshot.jpg)
+
+</details>
+
 
 
 ## 核心功能

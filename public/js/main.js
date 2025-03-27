@@ -397,14 +397,20 @@ function handleMessage(message) {
     case 'init':
       // 初始化数据
       isFirstUser = message.data.isFirstUser;
-      renderVideoList(message.data.videos);
       userCount.textContent = message.data.connectedUsers;
+      
+      // 如果有当前播放的视频，先设置当前视频ID
+      if (message.data.currentVideo && message.data.currentVideo.id) {
+        currentVideoId = message.data.currentVideo.id;
+      }
+      
+      // 渲染视频列表
+      renderVideoList(message.data.videos);
       
       // 如果有当前播放的视频，设置播放器
       if (message.data.currentVideo && message.data.currentVideo.id) {
         const video = message.data.videos.find(v => v.id === message.data.currentVideo.id);
         if (video) {
-          currentVideoId = video.id;
           videoTitle.textContent = video.name;
           
           // 如果播放器尚未初始化，则初始化它
@@ -618,6 +624,14 @@ function renderVideoList(videos) {
   videos.forEach(video => {
     addVideoToList(video);
   });
+  
+  // 确保当前播放视频被正确标记为active状态
+  if (currentVideoId) {
+    const currentItem = videoList.querySelector(`li[data-id="${currentVideoId}"]`);
+    if (currentItem) {
+      currentItem.classList.add('active');
+    }
+  }
 }
 
 // 添加视频到列表
