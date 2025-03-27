@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>同心之匣 - 天涯若比邻</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/artplayer/dist/artplayer.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div class="container">
+    <div class="title-container">
+      <h1>同心之匣</h1>
+    </div>
+
+    <div class="status-wrapper">
+      <div class="status-bar">
+        <div class="connection-status">
+          <span class="status-indicator"></span>
+          <span class="status-text">连接中...</span>
+        </div>
+        <div class="online-users">
+          <span class="users-icon"></span>
+          <span class="user-count">0</span> 人在线
+        </div>
+        <div class="network-delay">
+          <span class="signal-indicator">
+            <span></span>
+          </span>
+          <span class="delay-value">-</span> ms
+        </div>
+      </div>
+    </div>
+
+    <!-- 弹窗通知容器 -->
+    <div id="toast-container" class="toast-container"></div>
+
+    <main>
+      <div class="main-content">
+        <div class="player-section">
+          <div class="player-wrapper">
+            <div id="artplayer-container"></div>
+          </div>
+        </div>
+        
+        <div class="video-info-section">
+          <h2 class="video-title">未选择视频</h2>
+        </div>
+      </div>
+
+      <div class="sidebar">
+        <div class="playlist-section">
+          <div class="section-header">
+            <h3>播放列表</h3>
+            <button id="add-video-btn" class="add-btn">添加视频</button>
+          </div>
+          <ul id="video-list" class="video-list">
+            <!-- 视频列表将动态生成 -->
+          </ul>
+        </div>
+        
+        <div class="notification-section">
+          <h3>通知</h3>
+          <div id="notification-area" class="notification-area">
+            <!-- 通知内容将动态生成 -->
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <footer class="glass-effect">
+      <div class="footer-content">
+        <p>同心之匣，天涯若比邻</p>
+        <span class="copyright">© 2025</span>
+      </div>
+    </footer>
+  </div>
+
+  <!-- 添加视频弹窗 -->
+  <div id="add-video-modal" class="modal">
+    <div class="modal-content">
+      <span class="close-modal">&times;</span>
+      <h3>添加新视频</h3>
+      <form id="add-video-form">
+        <div class="form-group">
+          <label for="video-name">视频名称</label>
+          <input type="text" id="video-name" required>
+        </div>
+        <div class="form-group">
+          <label for="video-url">视频URL</label>
+          <input type="url" id="video-url" required>
+        </div>
+        <button type="submit" class="submit-btn">添加</button>
+      </form>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/artplayer/dist/artplayer.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html> 
