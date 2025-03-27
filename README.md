@@ -4,6 +4,14 @@
 
 同心之匣是一个基于WebSocket的多人同步视频播放系统，允许多个用户同时观看同一视频，并实时同步播放状态。无论用户身处何地，都能享受到共同观影的乐趣，实现"天涯若比邻"的观影体验。
 
+## 项目截图
+
+- **PC端网页截图**
+![PC端网页截图](screenshot/pc_screenshot.png)
+- **移动端网页截图**
+![移动端网页截图](screenshot/phone_screenshot.jpg)
+
+
 ## 核心功能
 
 - **实时同步播放**：所有用户的视频播放、暂停、进度跳转都能实时同步
@@ -44,7 +52,7 @@
 
 ```bash
 # 克隆项目
-git clone <https://github.com/xinxinyihao/tongxinzhixia.git>
+git clone https://github.com/xinxinyihao/tongxinzhixia.git
 
 # 安装依赖
 npm install
